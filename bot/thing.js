@@ -758,9 +758,12 @@ User = function(mention) {
 		if (mention.startsWith('!')) {
 			mention = mention.slice(1);
 		}
+let gotone = false;
 if(!isNumeric(mention)){
 client.users.cache.map((u)=>{
+if(gotone == true) return;
 if(u.username.toLowerCase().substring(0,mention.length) == mention.toLowerCase()){
+gotone = true;
 mention = u.id;
 };
 if(u.tag == mention){
