@@ -749,7 +749,7 @@ return;
 verified[m.user.id] = false;
 clearTimeout(vertable[m.user.id]);
 });
-User = async function(mention) {
+User = function(mention) {
 	if (!mention) return;
 
 	if (mention.startsWith('<@') && mention.endsWith('>')) {
