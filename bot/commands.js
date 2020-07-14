@@ -4,7 +4,7 @@
 /* Command Example:
 AddCommand("namehere",function(message,args){
 //function here
-},"Description here","All,Buyer,Premium,Special,Owner");
+},"Description here","All,Buyer,Premium,Special,Booster,Owner");
 */ 
 
 util = require('util');
@@ -1424,6 +1424,6 @@ changes = `` + "```ini" + `
 ` + "```";
 
 
-changes1 = `- Updated '>avatar' command`;
+changes1 = `- Minor bug fixes`;
 changes1 = changes1.split("/shrug").join("¯\\_(ツ)_/¯");
 currentchanges = changes1;
