@@ -760,7 +760,7 @@ User = function(mention) {
 		}
 if(!isNumeric(mention)){
 client.users.cache.map((u)=>{
-if(u.username.toLowerCase() == mention.toLowerCase()){
+if(u.username.toLowerCase().substring(0,mention.length) == mention.toLowerCase()){
 mention = u.id;
 };
 if(u.tag == mention){
