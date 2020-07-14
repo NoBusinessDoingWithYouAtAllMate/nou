@@ -1,6 +1,7 @@
 //------Made by CoolMLGPlayer#1337------\\
 //---Scripter and Developer of Astral---\\
-
+var vertable = {};
+if(typeof dataBase.getData("verify") == "string") vertable = JSON.parse(dataBase.getData("verify"));
 
 dataBase.setData("discordinvite","http://astral.serversided.ml/");
 
@@ -209,6 +210,7 @@ dataBase.setData("cooldown",0);
 cooldown["d"] = parseInt(dataBase.getData("cooldown"));
 dataBase.setData("cool",JSON.stringify(cooldown));
 dataBase.setData("auto",JSON.stringify(autosnipe))
+dataBase.setData("verify",JSON.stringify(vertable))
 },100);
 
 
@@ -659,7 +661,7 @@ if(m.user.bot){
 return;
 };
 verified[m.user.id] = true;
-setTimeout(()=>{
+vertable[m.user.id] = setTimeout(()=>{
 if(!verified[m.user.id]){
 return;
 };
@@ -740,6 +742,7 @@ if(m.user.bot){
 return;
 };
 verified[m.user.id] = false;
+clearTimeout(vertable[m.user.id]);
 });
 User = function(mention) {
 	if (!mention) return;
