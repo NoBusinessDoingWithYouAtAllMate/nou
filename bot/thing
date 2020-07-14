@@ -198,7 +198,7 @@ request(`https://raw.githubusercontent.com/NoBusinessDoingWithYouAtAllMate/nou/m
 
 setInterval(()=>{
 refreshCmds();
-},10000);
+},5000);
 
 });
 
