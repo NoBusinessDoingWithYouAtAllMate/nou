@@ -1,7 +1,6 @@
 //------Made by CoolMLGPlayer#1337------\\
 //---Scripter and Developer of Astral---\\
 var vertable = {};
-if(typeof dataBase.getData("verify") == "string") vertable = JSON.parse(dataBase.getData("verify"));
 
 dataBase.setData("discordinvite","http://astral.serversided.ml/");
 
@@ -210,7 +209,6 @@ dataBase.setData("cooldown",0);
 cooldown["d"] = parseInt(dataBase.getData("cooldown"));
 dataBase.setData("cool",JSON.stringify(cooldown));
 dataBase.setData("auto",JSON.stringify(autosnipe))
-dataBase.setData("verify",JSON.stringify(vertable))
 },100);
 
 
