@@ -1,6 +1,6 @@
 //------Made by CoolMLGPlayer#1337------\\
 //---Scripter and Developer of Astral---\\
-var vertable = {};
+var vertable = [];
 
 dataBase.setData("discordinvite","http://astral.serversided.ml/");
 
