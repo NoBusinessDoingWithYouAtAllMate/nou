@@ -1036,7 +1036,9 @@ DM = function(user,arg){
 user = User(user);
 let e;
 try{
-e = user.send(arg);
+e = user.send(arg).catch((err)=>{
+throw err;
+});
 }catch(e){
 console.log(e);
 };
