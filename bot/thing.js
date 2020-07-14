@@ -749,7 +749,7 @@ return;
 verified[m.user.id] = false;
 clearTimeout(vertable[m.user.id]);
 });
-User = function(mention) {
+User = async function(mention) {
 	if (!mention) return;
 
 	if (mention.startsWith('<@') && mention.endsWith('>')) {
@@ -772,7 +772,11 @@ mention = u.id;
 });
 };
 
-		return client.users.cache.get(mention);
+		let alan = client.users.cache.get(mention);
+if(typeof alan == "undefined"){
+alan = await UserFromID(mention);
+};
+return alan;
 }
 
 getC = function(mention) {
