@@ -695,7 +695,7 @@ const embed = new Discord.MessageEmbed()
 .setColor("00ff99")
 .setTitle("Message Update")
 .setThumbnail(avatarurl)
-.setDescription(oldm.author.toString() + " edited a message in " + oldm.channel.toString() + " from: '" + oldmc + "' to: '" + newmc + "'\n" + oldm.url);
+.setDescription(oldm.author.toString() + " edited a [**Message**](" + oldm.url + ") in " + oldm.channel.toString() + " from: '" + oldmc + "' to: '" + newmc + "'");
 c.send(embed);
 }catch{};
 };
