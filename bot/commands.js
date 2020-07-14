@@ -1424,6 +1424,6 @@ changes = `` + "```ini" + `
 ` + "```";
 
 
-changes1 = `- Minor bug fixes`;
+changes1 = `- Minor fixes`;
 changes1 = changes1.split("/shrug").join("¯\\_(ツ)_/¯");
 currentchanges = changes1;
