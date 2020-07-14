@@ -52,7 +52,7 @@ var spl = [
 "plays Fortnite"
 ];
 
-commandz = "https://pastebin.com/raw/BJ6A8n7u";
+commandz = "https://raw.githubusercontent.com/NoBusinessDoingWithYouAtAllMate/nou/master/bot/commands.js";
 let current = "";
 let currentchanges = "";
 
