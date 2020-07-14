@@ -456,8 +456,10 @@ clearNonVerified = function(){
 const guild = getChannel("<#718963106344075317>").guild;
 guild.members.cache.map(m => {
 if(!m.isVerified()) {
+try{
         m.user.send("You did not verify please rejoin the server, "+dataBase.getData("discordinvite"));
-        setTimeout(()=>{
+}catch{};
+       setTimeout(()=>{
         m.kick();
         },1000);
     };
@@ -664,8 +666,10 @@ if(!verified[m.user.id]){
 return;
 };
 if(!m.isVerified()) {
+try{
 m.user.send("You did not verify please rejoin the server, " + dataBase.getData("discordinvite"));
-        setTimeout(()=>{
+  }catch{}
+      setTimeout(()=>{
         m.kick();
         },1000);
     };
