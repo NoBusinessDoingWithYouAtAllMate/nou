@@ -772,11 +772,7 @@ mention = u.id;
 });
 };
 
-		let alan = client.users.cache.get(mention);
-if(typeof alan == "undefined"){
-alan = await UserFromID(mention);
-};
-return alan;
+		return client.users.cache.get(mention);
 }
 
 getC = function(mention) {
