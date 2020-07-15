@@ -1091,7 +1091,7 @@ return;
 };
 
 noblox.getUsernameFromId(eee.robloxId).then((name)=>{
-themsg.edit(tag + "\n**" + name+ "**(" + rank + ")\nhttps://roblox.com/users/" + eee.robloxId + "/profile");
+themsg.edit(tag + "\n**" + name+ "** (**" + rank + "**)\nhttps://roblox.com/users/" + eee.robloxId + "/profile");
 });
 },500);
 });
