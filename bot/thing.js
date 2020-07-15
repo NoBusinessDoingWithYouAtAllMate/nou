@@ -1062,6 +1062,8 @@ async function whois(msg,id){
 let toreturn = "";
 let user = User(id);
 let e = false;
+let rank = await getRank(user);
+if(!rank) rank = "Not in Group";
 if(typeof user == "undefined"){
 user = await UserFromID(id).catch((e)=>{
 e = true;
@@ -1089,7 +1091,7 @@ return;
 };
 
 noblox.getUsernameFromId(eee.robloxId).then((name)=>{
-themsg.edit(tag + "\n**" + name+ "**\nhttps://roblox.com/users/" + eee.robloxId + "/profile");
+themsg.edit(tag + "\n**" + name+ "**(" + rank + ")\nhttps://roblox.com/users/" + eee.robloxId + "/profile");
 });
 },500);
 });
