@@ -256,7 +256,7 @@ if(message.member){
 if(cmds[command].perm == "Special" && !message.member.isSpecial()){
 
 const embed = new Discord.MessageEmbed()
-            .setTitle("Error")
+            .setTitle("❗Error")
             .setColor("ff5555")
             .setDescription("You do not have permission to do this. Permission required: Special")
         return message.reply(embed);
@@ -266,7 +266,7 @@ const embed = new Discord.MessageEmbed()
 if(cmds[command].perm == "Booster" && !message.member.isBooster()){
 
 const embed = new Discord.MessageEmbed()
-            .setTitle("Error")
+            .setTitle("❗Error")
             .setColor("ff5555")
             .setDescription("You do not have permission to do this. Permission required: Booster")
         return message.reply(embed);
@@ -276,7 +276,7 @@ const embed = new Discord.MessageEmbed()
 if(cmds[command].perm == "Premium" && !message.member.hasPremium()){
 
 const embed = new Discord.MessageEmbed()
-            .setTitle("Error")
+            .setTitle("❗Error")
             .setColor("ff5555")
             .setDescription("You do not have permission to do this. Permission required: Premium")
         return message.reply(embed);
@@ -286,7 +286,7 @@ const embed = new Discord.MessageEmbed()
 if(cmds[command].perm == "Buyer" && !message.member.isBuyer()){
 
 const embed = new Discord.MessageEmbed()
-            .setTitle("Error")
+            .setTitle("❗Error")
             .setColor("ff5555")
             .setDescription("You do not have permission to do this. Permission required: Buyer")
         return message.reply(embed);
@@ -296,7 +296,7 @@ const embed = new Discord.MessageEmbed()
 if(cmds[command].perm == "Owner" && !message.member.isOwner()){
 
 const embed = new Discord.MessageEmbed()
-            .setTitle("Error")
+            .setTitle("❗Error")
             .setColor("ff5555")
             .setDescription("You do not have permission to do this. Permission required: Owner")
         return message.reply(embed);
@@ -345,7 +345,7 @@ if(message.member){
 if(cmds[e].perm == "Special" && !message.member.isSpecial()){
 
 const embed = new Discord.MessageEmbed()
-            .setTitle("Error")
+            .setTitle("❗Error")
             .setColor("ff5555")
             .setDescription("You do not have permission to do this. Permission required: Special")
         return message.reply(embed);
@@ -355,7 +355,7 @@ const embed = new Discord.MessageEmbed()
 if(cmds[command].perm == "Booster" && !message.member.isBooster()){
 
 const embed = new Discord.MessageEmbed()
-            .setTitle("Error")
+            .setTitle("❗Error")
             .setColor("ff5555")
             .setDescription("You do not have permission to do this. Permission required: Booster")
         return message.reply(embed);
@@ -365,7 +365,7 @@ const embed = new Discord.MessageEmbed()
 if(cmds[e].perm == "Premium" && !message.member.hasPremium()){
 
 const embed = new Discord.MessageEmbed()
-            .setTitle("Error")
+            .setTitle("❗Error")
             .setColor("ff5555")
             .setDescription("You do not have permission to do this. Permission required: Premium")
         return message.reply(embed);
@@ -375,7 +375,7 @@ const embed = new Discord.MessageEmbed()
 if(cmds[e].perm == "Buyer" && !message.member.isBuyer()){
 
 const embed = new Discord.MessageEmbed()
-            .setTitle("Error")
+            .setTitle("❗Error")
             .setColor("ff5555")
             .setDescription("You do not have permission to do this. Permission required: Buyer")
         return message.reply(embed);
@@ -385,7 +385,7 @@ const embed = new Discord.MessageEmbed()
 if(cmds[e].perm == "Owner" && !message.member.isOwner()){
 
 const embed = new Discord.MessageEmbed()
-            .setTitle("Error")
+            .setTitle("❗Error")
             .setColor("ff5555")
             .setDescription("You do not have permission to do this. Permission required: Owner")
         return message.reply(embed);
