@@ -1071,7 +1071,7 @@ e = true;
 };
 if(typeof user == "undefined" || e == true) return msg.reply("invalid user");
 let themsg = "";
-msg.reply("Looking for **" + user.tag + "** in database...").then((re) => {
+msg.reply("<a:loading2:733394615675125802>Looking for **" + user.tag + "** in database...").then((re) => {
 themsg = re
 });
 request('https://verify.eryn.io/api/user/' + user.id, function (error, response, body) {
