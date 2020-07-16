@@ -1008,7 +1008,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
 		}
 	}
 if (reaction.message.channel.name.toLowerCase() == "votes"){
-if (!reaction.emoji.id && reaction.emoji.id !== '733302518284550294' && reaction.emoji.id !== '733302533493358652'){
+if (reaction.emoji.toString() !== '👍' && reaction.emoji.toString() !== '👎'){
 reaction.remove().catch(error => console.error('Failed to remove reactions: ', error));
 };
 };
@@ -1018,8 +1018,8 @@ reaction.remove().catch(error => console.error('Failed to remove reactions: ', e
 client.on('message', (message) => {
 try{
 if(message.channel.name.toLowerCase() === "votes" && message.author.id == client.user.id){
-message.react(aguild.emojis.cache.get('733302518284550294'));
-message.react(aguild.emojis.cache.get('733302533493358652'));
+message.react('👍');
+message.react('👎');
 };
 if(message.content=="🤔"){
 try{
