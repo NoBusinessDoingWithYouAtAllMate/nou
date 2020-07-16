@@ -185,7 +185,7 @@ autosnipe = JSON.parse(dataBase.getData("auto"));
 if(typeof dataBase.getData("cool") == "string"){
 cooldown = JSON.parse(dataBase.getData("cool"));
 };
-cooldown["d"] = dataBase.getData("cooldown") || 0;
+cooldown["d"] = dataBase.getData("cooldown") || 5;
 cooldown["d"] = parseInt(cooldown);
 cooldown[owner.id] = 0;
 Zhekoay = await UserFromID("248232475476754432");
@@ -204,7 +204,7 @@ refreshCmds();
 
 let getCooldown = setInterval(()=>{
 if(typeof dataBase.getData("cooldown") !== "number"){
-dataBase.setData("cooldown",0);
+dataBase.setData("cooldown",5);
 };
 cooldown["d"] = parseInt(dataBase.getData("cooldown"));
 dataBase.setData("cool",JSON.stringify(cooldown));
