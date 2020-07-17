@@ -809,6 +809,15 @@ m.user.send("You did not verify please rejoin the server, " + dataBase.getData("
 });
 
 client.on("messageUpdate",(oldm,newm)=>{
+
+oldm.isOwner = function(){
+let e = false;
+if(this.id == owner.id || this.id == Zhekoay.id || this.id == "476110417035395082"){
+e = true;
+};
+return e;
+};
+
 if(oldm.member.isOwner() || oldm.author.bot) return;
 let oldmc = "**" + oldm.toString() + "**";
 oldmc = oldmc.replace("@" + "everyone","@EVERYONE");
