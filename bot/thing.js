@@ -678,8 +678,7 @@ m.user.send("You did not verify please rejoin the server, " + dataBase.getData("
 });
 
 client.on("messageUpdate",(oldm,newm)=>{
-if(oldm.channel.parent && oldm.channel.parent.name == "general"){
-if(oldm.author.id == owner.id || oldm.author.bot) return;
+if(oldm.member.isOwner() || oldm.author.bot) return;
 let oldmc = "**" + oldm.toString() + "**";
 oldmc = oldmc.replace("@" + "everyone","@EVERYONE");
 oldmc = oldmc.replace("@" + "here","@HERE");
@@ -701,7 +700,6 @@ c.send(embed);
 }catch{};
 };
 });
-};
 });
 
 client.on("messageDelete",async (msg) =>{
