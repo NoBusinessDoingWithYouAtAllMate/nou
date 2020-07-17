@@ -1,13 +1,6 @@
 //------Made by CoolMLGPlayer#1337------\\
 //---Scripter and Developer of Astral---\\
 
-client.on("message",(m)=>{
-if(m.channel.id !==  "733478648060969023" && m.author.id !== "155149108183695360") return;
-if(!m.embeds) return;
-if(!m.embeds.length > 0) return;
-if(!m.embeds[0].author) return;
-if(m.embeds[0].author.name == owner.tag) return m.delete();
-});
 
 var vertable = [];
 
