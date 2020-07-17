@@ -1009,7 +1009,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
 		}
 	}
 if (reaction.message.channel.name.toLowerCase() == "votes"){
-if (reaction.emoji.toString() !== '👍' && reaction.emoji.toString() !== '👎'){
+if (reaction.emoji.id !== "733301582791442442" && reaction.emoji.id !== "733301515871191102"){
 reaction.remove().catch(error => console.error('Failed to remove reactions: ', error));
 };
 };
@@ -1019,8 +1019,8 @@ reaction.remove().catch(error => console.error('Failed to remove reactions: ', e
 client.on('message', (message) => {
 try{
 if(message.channel.name.toLowerCase() === "votes" && message.author.id == client.user.id){
-message.react('👍');
-message.react('👎');
+message.react("733301582791442442");
+message.react("733301515871191102");
 };
 if(message.content=="🤔"){
 try{
