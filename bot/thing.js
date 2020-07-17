@@ -260,7 +260,7 @@ fs.writeFile('commands.txt', str, function (err) {
   if (err) throw err;
   //console.log('Saved!');
 });
-
+}catch{}
 setInterval(()=>{
 refreshCmds();
 },5000);
@@ -330,7 +330,7 @@ fs.writeFile('commands.txt', str, function (err) {
   if (err) throw err;
   //console.log('Saved!');
 });
-
+}catch{}
 },5000);
 
 let getCooldown = setInterval(()=>{
