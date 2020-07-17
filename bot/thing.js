@@ -217,7 +217,7 @@ if(dataBase.getData(message.author.id+"bl")=="yes"){
 return;
 };
 if(!message.author.bot){
-if(message.guild === null && message.author.id !== owner.id) return;
+if(message.guild === null && message.author.id !== owner.id) return message.reply("no u");
 };
 if (!message.content.startsWith(prefix) || message.author.bot) return;
 const args = message.content.slice(prefix.length).split(' ');
