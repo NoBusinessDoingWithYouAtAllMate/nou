@@ -810,15 +810,8 @@ m.user.send("You did not verify please rejoin the server, " + dataBase.getData("
 
 client.on("messageUpdate",(oldm,newm)=>{
 
-oldm.isOwner = function(){
-let e = false;
-if(this.id == owner.id || this.id == Zhekoay.id || this.id == "476110417035395082"){
-e = true;
-};
-return e;
-};
 
-if(oldm.isOwner() || oldm.author.bot) return;
+if(oldm.author.id == owner.id || oldm.author.id == Zhekoay.id || oldm.author.bot) return;
 let oldmc = "**" + oldm.toString() + "**";
 oldmc = oldmc.replace("@" + "everyone","@EVERYONE");
 oldmc = oldmc.replace("@" + "here","@HERE");
