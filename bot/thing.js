@@ -14,7 +14,7 @@ channel.send(embed);
 client.on("guildMemberRemove",(m)=>{
 let channel = m.guild.channels.cache.find(c => c.name === "logs");
 const embed = new Discord.MessageEmbed()
-.setColor("00ff99")
+.setColor("ff5555")
 .setTitle("**Goodbye**")
 .setDescription(m.tag + " has left **Astral**.")
 .addField("**Member Count**",m.guild.memberCount);
