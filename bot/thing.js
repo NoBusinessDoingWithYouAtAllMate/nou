@@ -16,7 +16,7 @@ let channel = m.guild.channels.cache.find(c => c.name === "logs");
 const embed = new Discord.MessageEmbed()
 .setColor("ff5555")
 .setTitle("**Goodbye**")
-.setDescription(m.user.tag + " has left **Astral**.")
+.setDescription(m.toString() + " (" + m.user.tag + ") has left **Astral**.")
 .addField("**Member Count**",m.guild.memberCount);
 channel.send(embed);
 });
