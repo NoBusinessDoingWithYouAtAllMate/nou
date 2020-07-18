@@ -917,7 +917,15 @@ gotone = true;
 mention = u.id;
 };
 if(u.tag == mention){
+gotone = true;
 mention = u.id;
+};
+});
+client.users.cache.map((u)=>{
+if(gotone) return;
+if(u.username.toLowerCase().includes(mention.toLowerCase())){
+gotone = true;
+mention = u.id; 
 };
 });
 };
