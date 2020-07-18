@@ -1,6 +1,25 @@
 //------Made by CoolMLGPlayer#1337------\\
 //---Scripter and Developer of Astral---\\
 
+client.on("guildMemberAdd",(m)=>{
+let channel = m.guild.channels.cache.find(c => c.name === "logs");
+const embed = new Discord.MessageEmbed()
+.setColor("00ff99")
+.setTitle("**Welcome**")
+.setDescription("Welcome to **Astral** " + m.toString())
+.addField("**Member Count**",m.guild.memberCount);
+channel.send(embed);
+});
+
+client.on("guildMemberRemove",(m)=>{
+let channel = m.guild.channels.cache.find(c => c.name === "logs");
+const embed = new Discord.MessageEmbed()
+.setColor("00ff99")
+.setTitle("**Goodbye**")
+.setDescription(m.tag + " has left **Astral**.")
+.addField("**Member Count**",m.guild.memberCount);
+channel.send(embed);
+});
 
 var vertable = [];
 
