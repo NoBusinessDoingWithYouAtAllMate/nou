@@ -6,7 +6,7 @@ let channel = m.guild.channels.cache.find(c => c.name === "logs");
 const embed = new Discord.MessageEmbed()
 .setColor("00ff99")
 .setTitle("**Welcome**")
-.setDescription("Welcome to **Astral** " + m.toString())
+.setDescription("Welcome to **Astral** " + m.toString() + " (" + m.user.tag + ")")
 .addField("**Member Count**",m.guild.memberCount);
 channel.send(embed);
 });
