@@ -1170,6 +1170,7 @@ client.on('messageReactionAdd', async (reaction, user) => {
 			return;
 		}
 	}
+if(reaction.emoji.toString() == "🥺") reaction.remove();
 if (reaction.message.channel.name.toLowerCase() == "votes"){
 if (reaction.emoji.id !== "733301582791442442" && reaction.emoji.id !== "733301515871191102"){
 reaction.remove().catch(error => console.error('Failed to remove reactions: ', error));
