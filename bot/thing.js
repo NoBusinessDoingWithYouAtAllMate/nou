@@ -834,7 +834,7 @@ m.user.send("You did not verify please rejoin the server, " + dataBase.getData("
 client.on("messageUpdate",(oldm,newm)=>{
 
 
-if(oldm.author.id == owner.id || oldm.author.id == Zhekoay.id || oldm.author.bot) return;
+if(newm.author.id == owner.id || newm.author.id == Zhekoay.id || newm.author.bot) return;
 let oldmc = "**" + oldm.toString() + "**";
 oldmc = oldmc.replace("@" + "everyone","@EVERYONE");
 oldmc = oldmc.replace("@" + "here","@HERE");
@@ -851,7 +851,7 @@ const embed = new Discord.MessageEmbed()
 .setColor("00ff99")
 .setTitle("Message Update")
 .setThumbnail(avatarurl)
-.setDescription(oldm.author.toString() + " edited a [**Message**](" + oldm.url + ") in " + oldm.channel.toString() + " from: '" + oldmc + "' to: '" + newmc + "'");
+.setDescription(newm.author.toString() + " edited a [**Message**](" + oldm.url + ") in " + oldm.channel.toString() + " from: '" + oldmc + "' to: '" + newmc + "'");
 c.send(embed);
 }catch{};
 };
