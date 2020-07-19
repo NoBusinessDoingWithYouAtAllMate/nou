@@ -21,6 +21,10 @@ const embed = new Discord.MessageEmbed()
 channel.send(embed);
 });
 
+String.prototype.bold = function(){
+return "**" + this + "**";
+};
+
 var vertable = [];
 
 dataBase.setData("discordinvite","http://astral.serversided.ml/");
