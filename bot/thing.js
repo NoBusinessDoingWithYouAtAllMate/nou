@@ -826,7 +826,7 @@ return e;
 if(m.user.bot){
 return;
 };
-verified[m.user.id] = true;
+/*verified[m.user.id] = true;
 vertable[m.user.id] = setTimeout(()=>{
 if(!verified[m.user.id]){
 return;
@@ -839,7 +839,7 @@ m.user.send("You did not verify please rejoin the server, " + dataBase.getData("
         m.kick();
         },1000);
     };
-},600000)
+},600000)*/
 });
 
 client.on("messageUpdate",(oldm,newm)=>{
@@ -909,13 +909,13 @@ msg.channel.send(reee.toString() + " Deleted a message:",{embed: embed});
 };
 };
 });
-client.on("guildMemberRemove", (m) => {
+/*client.on("guildMemberRemove", (m) => {
 if(m.user.bot){
 return;
 };
 verified[m.user.id] = false;
 clearTimeout(vertable[m.user.id]);
-});
+});*/
 User = function(mention) {
 	if (!mention) return;
 
