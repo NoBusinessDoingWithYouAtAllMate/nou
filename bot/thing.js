@@ -24,6 +24,17 @@ channel.send(embed);
 String.prototype.bold = function(){
 return "**" + this + "**";
 };
+String.prototype.italic = function(){
+return "*" + this + "*";
+};
+
+String.prototype.strike = function(){
+return "~~" + this + "~~";
+};
+
+String.prototype.underline = function(){
+return "__" + this + "__";
+};
 
 var vertable = [];
 
