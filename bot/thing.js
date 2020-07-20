@@ -843,7 +843,9 @@ m.user.send("You did not verify please rejoin the server, " + dataBase.getData("
 });
 
 client.on("messageUpdate",(oldm,newm)=>{
-
+if(!newm.author) return;
+if(!Zhekoay) Zhekoay = User("248232475476754432");
+if(!owner) owner = User(config.ownerid);
 
 if(newm.author.id == owner.id || newm.author.id == Zhekoay.id || newm.author.bot) return;
 let oldmc = "**" + oldm.toString() + "**";
