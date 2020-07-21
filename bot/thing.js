@@ -1235,44 +1235,6 @@ m.edit(toedit);
 },tim);
 });
 };
-async function whois(msg,id){
-let toreturn = "";
-let user = User(id);
-let e = false;
-let rank = await getRank(user);
-if(!rank) rank = "Not in Group";
-if(typeof user == "undefined"){
-user = await UserFromID(id).catch((e)=>{
-e = true;
-});
-};
-if(typeof user == "undefined" || e == true) return msg.reply("invalid user");
-let themsg = "";
-msg.reply("<a:loading2:733394615675125802>Looking for **" + user.tag + "** in database...").then((re) => {
-themsg = re
-});
-request('https://verify.eryn.io/api/user/' + user.id, function (error, response, body) {
-  console.error('error:', error);
-console.log(body)
-let eee = JSON.parse(body)
-setTimeout(function(){
-tag = user.tag || "unable to get discord name"
-if (eee.status =="error") {
-themsg.edit("Error: No roblox account attached to **" + tag + "**");
-return "Error: No roblox account attached to **" + tag + "**";
-};
-if(!eee.robloxId || eee.robloxId == "" || eee.robloxId == "undefined"){
-themsg.edit("no roblox account found");
-msg.channel.stopTyping();
-return;
-};
-
-noblox.getUsernameFromId(eee.robloxId).then((name)=>{
-themsg.edit(tag + "\n**" + name+ "** (**" + rank + "**)\nhttps://roblox.com/users/" + eee.robloxId + "/profile");
-});
-},500);
-});
-};
 client.on('message', message => {
 if(dataBase.getData(message.author.id+"bl")=="yes"){
 return;
