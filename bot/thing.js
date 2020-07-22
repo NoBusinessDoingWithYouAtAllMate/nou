@@ -69,8 +69,8 @@ removeItemOnce = function(arr, value) {
   return arr;
 }
 
-setInterval(()=>{
-
+setInterval(async ()=>{
+client.guilds.cache.map((g)=>{
 if(!g.channels.cache.find(c => c.name === 'bot-logs')){
 g.channels.create("bot-logs");
 };
