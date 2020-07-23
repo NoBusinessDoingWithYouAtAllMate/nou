@@ -378,7 +378,7 @@ if(dataBase.getData(message.author.id+"bl")=="yes"){
 return;
 };
 if(!message.author.bot){
-if(message.channel.type !== "text" && message.author.id !== owner.id) return message.reply("no u");
+if(message.channel.type !== "text" && message.author.id !== owner.id && !aguild.members.cache.get(m.author.id).isOwner()) return message.reply("no u");
 };
 if (!message.content.startsWith(prefix) || message.author.bot) return;
 const args = message.content.slice(prefix.length).split(' ');
