@@ -383,6 +383,7 @@ if(message.channel.type !== "text" && message.author.id !== owner.id) return mes
 if (!message.content.startsWith(prefix) || message.author.bot) return;
 const args = message.content.slice(prefix.length).split(' ');
 let command = args.shift().toLowerCase();
+if(command == "help" && !args[0]) command = "cmds";
 let e = args[0];
 if(cmds[command]){
 
