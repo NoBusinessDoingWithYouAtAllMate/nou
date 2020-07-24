@@ -38,7 +38,7 @@ return "__" + this + "__";
 
 var vertable = [];
 
-dataBase.setData("discordinvite","http://astral.serversided.ml/");
+dataBase.setData("discordinvite","https://discord.gg/9dQnxvW");
 
 crypto = require('crypto');
 
