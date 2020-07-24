@@ -1196,8 +1196,8 @@ message.react("733301582791442442");
 message.react("733301515871191102");
 };
 if(message.channel.name.toLowerCase() == "suggestions"){
-message.react("👍");
-message.react("👎");
+message.react("733301582791442442");
+message.react("733301515871191102");
 };
 if(message.content=="🤔"){
 try{
