@@ -1196,6 +1196,18 @@ message.react("733301582791442442");
 message.react("733301515871191102");
 };
 if(message.channel.name.toLowerCase() == "suggestions"){
+if(!message.content.toLowerCase().startsWith("suggestion:"){
+const embed = new Embed()
+.setColor("ff5555")
+.setTitle("Invalid Format")
+.setDescription("[Click Here](https://discord.com/channels/718963106344075314/718966196095025183/736268316221636738) to see valid format for suggestions.");
+message.reply(embed).then((m)=>{
+setTimeout(()=>{
+m.delete();
+},10000)
+});
+return;
+};
 message.react("733301582791442442");
 message.react("733301515871191102");
 };
