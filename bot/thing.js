@@ -1,6 +1,6 @@
 //------Made by CoolMLGPlayer#1337------\\
 //---Scripter and Developer of Astral---\\
-//105281819299494
+//222
 client.on("guildMemberAdd",(m)=>{
 let channel = m.guild.channels.cache.find(c => c.name === "logs");
 const embed = new Discord.MessageEmbed()
@@ -1201,8 +1201,8 @@ if(message.author.bot) return;
 message.delete();
 const embed = new Embed()
 .setColor("ff5555")
-.setTitle("Invalid Format")
-.setDescription("[Click Here](https://discord.com/channels/718963106344075314/718966196095025183/736268316221636738) to see valid format for suggestions.");
+.setTitle("Invalid Format".bold())
+.setDescription("[**Click Here**](https://discord.com/channels/718963106344075314/718966196095025183/736268316221636738) to see valid format for suggestions.");
 message.reply(embed).then((m)=>{
 setTimeout(()=>{
 m.delete();
