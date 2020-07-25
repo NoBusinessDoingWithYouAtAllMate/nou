@@ -1,6 +1,6 @@
 //------Made by CoolMLGPlayer#1337------\\
 //---Scripter and Developer of Astral---\\
-//55
+//105281819299494
 client.on("guildMemberAdd",(m)=>{
 let channel = m.guild.channels.cache.find(c => c.name === "logs");
 const embed = new Discord.MessageEmbed()
@@ -1197,6 +1197,7 @@ message.react("733301515871191102");
 };
 if(message.channel.name.toLowerCase() == "suggestions"){
 if(!message.content.toLowerCase().startsWith("suggestion:")){
+if(message.author.bot) return;
 message.delete();
 const embed = new Embed()
 .setColor("ff5555")
