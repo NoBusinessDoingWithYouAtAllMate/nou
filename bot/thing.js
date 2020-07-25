@@ -1196,7 +1196,7 @@ message.react("733301582791442442");
 message.react("733301515871191102");
 };
 if(message.channel.name.toLowerCase() == "suggestions"){
-if(!message.content.toLowerCase().startsWith("suggestion:"){
+if(!message.content.toLowerCase().startsWith("suggestion:")){
 message.delete();
 const embed = new Embed()
 .setColor("ff5555")
