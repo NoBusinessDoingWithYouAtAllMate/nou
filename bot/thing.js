@@ -1,6 +1,6 @@
 //------Made by CoolMLGPlayer#1337------\\
 //---Scripter and Developer of Astral---\\
-//431
+//500
 client.on("guildMemberAdd",(m)=>{
 let channel = m.guild.channels.cache.find(c => c.name === "logs");
 const embed = new Discord.MessageEmbed()
@@ -656,11 +656,13 @@ return e;
 };
 
 m.isVerified = function(){
-return this.roles.cache.has("718967724184830013");
+
+return this.roles.cache.some(r => r.name === "Verified");
+
 };
 
 m.isMuted = function(){
-return this.roles.cache.find(r => r.name === "Verified");
+return this.roles.cache.some(r => r.name === "Muted");
 };
 
 m.mute = function(){
