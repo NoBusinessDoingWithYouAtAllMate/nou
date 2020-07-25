@@ -1,6 +1,6 @@
 //------Made by CoolMLGPlayer#1337------\\
 //---Scripter and Developer of Astral---\\
-//2
+//55
 client.on("guildMemberAdd",(m)=>{
 let channel = m.guild.channels.cache.find(c => c.name === "logs");
 const embed = new Discord.MessageEmbed()
