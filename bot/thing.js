@@ -641,7 +641,7 @@ return e;
 
 m.isBooster = function(){
 let e = false;
-if(this.id == owner.id || this.id == Zhekoay.id || this.roles.cache.has("728676283558396034")){
+if(this.id == owner.id || this.id == Zhekoay.id || this.premiumSince){
 e = true;
 };
 return e;
@@ -660,7 +660,7 @@ return this.roles.cache.has("718967724184830013");
 };
 
 m.isMuted = function(){
-return this.roles.cache.has("727576540182872106");
+return this.roles.cache.find(r => r.name === "Verified");
 };
 
 m.mute = function(){
@@ -719,11 +719,12 @@ return e;
 
 m.isBooster = function(){
 let e = false;
-if(this.id == owner.id || this.id == Zhekoay.id || this.roles.cache.has("728676283558396034")){
+if(this.id == owner.id || this.id == Zhekoay.id || this.premiumSince){
 e = true;
 };
 return e;
 };
+
 
 m.isOwner = function(){
 let e = false;
@@ -769,7 +770,7 @@ client.on("guildMemberAdd", (m) => {
 
 m.isBooster = function(){
 let e = false;
-if(this.id == owner.id || this.id == Zhekoay.id || this.roles.cache.has("728676283558396034")){
+if(this.id == owner.id || this.id == Zhekoay.id || this.premiumSince){
 e = true;
 };
 return e;
